@@ -3,7 +3,7 @@ import type { StatusResponse } from '../types';
 
 export default function StatusPanel() {
   const { data, loading, error } = useFetch<StatusResponse>(
-    'https://monitor.lovebxy.net/api/status',
+    '/api/status',
     60000
   );
 

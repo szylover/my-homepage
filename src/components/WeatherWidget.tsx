@@ -2,6 +2,10 @@ import { useState, useEffect, useCallback } from 'react';
 import { useLocalStorage } from '../hooks';
 import type { WeatherData } from '../types';
 
+const DEFAULT_CITY = 'Shanghai';
+type GeoStatus = 'idle' | 'pending' | 'ready' | 'failed';
+type GeoCoords = { latitude: number; longitude: number };
+
 const WEATHER_ICONS: Record<string, string> = {
   'Sunny': '☀️', 'Clear': '🌙', 'Partly cloudy': '⛅', 'Cloudy': '☁️',
   'Overcast': '☁️', 'Mist': '🌫️', 'Fog': '🌫️', 'Light rain': '🌦️',
@@ -13,33 +17,100 @@ function getIcon(desc: string) {
   return WEATHER_ICONS[desc] || '🌡️';
 }
 
+function formatGeoQuery(coords: GeoCoords) {
+  return `${coords.latitude},${coords.longitude}`;
+}
+
+function buildWeatherUrl(loc: string) {
+  const query = /^[+-]?\d+(?:\.\d+)?,[+-]?\d+(?:\.\d+)?$/.test(loc) ? loc : encodeURIComponent(loc);
+  return `https://wttr.in/${query}?format=j1`;
+}
+
 export default function WeatherWidget() {
   const [city, setCity] = useLocalStorage('dashboard-city', '');
+  const manualCity = city.trim();
+  const [geoStatus, setGeoStatus] = useState<GeoStatus>(manualCity ? 'idle' : 'pending');
+  const [geoCoords, setGeoCoords] = useState<GeoCoords | null>(null);
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(true);
   const [editing, setEditing] = useState(false);
   const [cityInput, setCityInput] = useState(city);
 
   const fetchWeather = useCallback(async (loc: string) => {
-    setLoading(true);
-    try {
-      const q = loc || 'auto';
-      const res = await fetch(`https://wttr.in/${encodeURIComponent(q)}?format=j1`);
-      if (!res.ok) throw new Error('Weather fetch failed');
-      const data = await res.json();
-      setWeather(data);
-    } catch {
-      setWeather(null);
-    } finally {
-      setLoading(false);
-    }
+    const res = await fetch(buildWeatherUrl(loc));
+    if (!res.ok) throw new Error('Weather fetch failed');
+    return res.json() as Promise<WeatherData>;
   }, []);
 
-  useEffect(() => { fetchWeather(city); }, [city, fetchWeather]);
+  useEffect(() => {
+    if (manualCity) return;
+
+    let cancelled = false;
+    queueMicrotask(() => {
+      if (!cancelled) setGeoStatus('pending');
+    });
+
+    if (typeof window === 'undefined' || !navigator.geolocation) {
+      queueMicrotask(() => {
+        if (!cancelled) setGeoStatus('failed');
+      });
+      return () => {
+        cancelled = true;
+      };
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        if (cancelled) return;
+        setGeoCoords({ latitude: position.coords.latitude, longitude: position.coords.longitude });
+        setGeoStatus('ready');
+      },
+      () => {
+        if (cancelled) return;
+        setGeoStatus('failed');
+      },
+      {
+        enableHighAccuracy: false,
+        timeout: 10000,
+        maximumAge: 300000,
+      },
+    );
+
+    return () => {
+      cancelled = true;
+    };
+  }, [manualCity]);
+
+  const weatherQuery = manualCity || (geoCoords ? formatGeoQuery(geoCoords) : geoStatus === 'failed' ? DEFAULT_CITY : '');
+
+  useEffect(() => {
+    if (!weatherQuery) return;
+
+    let cancelled = false;
+
+    Promise.resolve().then(async () => {
+      if (cancelled) return;
+      setLoading(true);
+      try {
+        const data = await fetchWeather(weatherQuery);
+        if (!cancelled) setWeather(data);
+      } catch {
+        if (!cancelled) setWeather(null);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [weatherQuery, fetchWeather]);
 
   const handleCitySubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setCity(cityInput.trim());
+    const nextCity = cityInput.trim();
+    setCity(nextCity);
+    setCityInput(nextCity);
     setEditing(false);
   };
 

@@ -6,6 +6,7 @@ import WeatherWidget from './components/WeatherWidget';
 import TodoList from './components/TodoList';
 import RssFeed from './components/RssFeed';
 import NotePad from './components/NotePad';
+import BookShelf from './components/BookShelf';
 import './App.css';
 
 export default function App() {
@@ -20,6 +21,10 @@ export default function App() {
         <section className="dashboard-row">
           <AppGrid />
           <StatusPanel />
+        </section>
+
+        <section className="dashboard-row full">
+          <BookShelf />
         </section>
 
         <section className="dashboard-row">
