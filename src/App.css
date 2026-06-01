@@ -401,21 +401,24 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 4px; }
 
 /* BookShelf */
-.book-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
 }
-.book-item {
+.book-card {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.7rem;
   background: var(--bg);
   border-radius: 10px;
   padding: 0.7rem 0.8rem;
-  transition: background 0.15s;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  border: 1px solid transparent;
 }
-.book-item:hover { background: var(--surface2); }
+.book-card:hover { background: var(--surface2); }
+.book-card.active { border-color: var(--accent); background: var(--surface2); }
 .book-emoji { font-size: 1.5rem; }
 .book-info {
   flex: 1;
@@ -425,25 +428,48 @@ body {
 }
 .book-title {
   color: var(--text);
-  text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.book-title:hover { color: var(--accent); }
 .book-desc {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--muted);
 }
-.book-repo {
-  text-decoration: none;
-  font-size: 1rem;
-  opacity: 0.5;
-  transition: opacity 0.15s;
+
+.book-reader {
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--surface2);
 }
-.book-repo:hover { opacity: 1; }
+.book-reader-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.8rem;
+  background: var(--bg);
+  font-size: 0.85rem;
+}
+.book-reader-title { font-weight: 600; }
+.book-reader-actions { display: flex; gap: 0.5rem; }
+.book-reader-btn {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  background: var(--surface2);
+}
+.book-reader-btn:hover { background: var(--surface); }
+.book-reader-frame {
+  width: 100%;
+  height: 75vh;
+  border: none;
+  background: #fff;
+}
 
 .dashboard-row.full {
   grid-template-columns: 1fr;
@@ -455,4 +481,6 @@ body {
   .dashboard-row { grid-template-columns: 1fr; }
   .greeting-time { font-size: 3rem; }
   .app-grid { grid-template-columns: repeat(2, 1fr); }
+  .book-grid { grid-template-columns: 1fr; }
+  .book-reader-frame { height: 60vh; }
 }

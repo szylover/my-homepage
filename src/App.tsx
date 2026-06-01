@@ -23,10 +23,6 @@ export default function App() {
           <StatusPanel />
         </section>
 
-        <section className="dashboard-row full">
-          <BookShelf />
-        </section>
-
         <section className="dashboard-row">
           <WeatherWidget />
           <TodoList />
@@ -35,6 +31,10 @@ export default function App() {
         <section className="dashboard-row">
           <RssFeed />
           <NotePad />
+        </section>
+
+        <section className="dashboard-row full">
+          <BookShelf />
         </section>
       </main>
 
