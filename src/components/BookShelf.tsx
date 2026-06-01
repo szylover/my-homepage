@@ -86,7 +86,7 @@ export default function BookShelf() {
           </div>
           <iframe
             className="book-reader-frame"
-            src={activeBook.rawPdfUrl}
+            src={`https://docs.google.com/viewer?url=${encodeURIComponent(activeBook.rawPdfUrl)}&embedded=true`}
             title={activeBook.title}
           />
         </div>
