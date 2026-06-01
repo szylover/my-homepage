@@ -25,6 +25,14 @@ const books: Book[] = [
     chapters: '10+',
   },
   {
+    title: '模形式的代数基础',
+    emoji: '📐',
+    description: '从矩阵到 Galois 理论 · 750+ 习题',
+    pdfUrl: 'https://github.com/szylover/chinese-modular-forms/tree/main/algebra-book',
+    repoUrl: 'https://github.com/szylover/chinese-modular-forms/tree/main/algebra-book',
+    chapters: 12,
+  },
+  {
     title: '模形式教材',
     emoji: '📗',
     description: '中文模形式数学教材',
