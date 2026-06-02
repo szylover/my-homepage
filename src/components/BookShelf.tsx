@@ -25,6 +25,22 @@ const books: Book[] = [
     chapters: '10+',
   },
   {
+    title: '线性代数：从向量空间到算子',
+    emoji: '📘',
+    description: 'LADR风格 · 行列式最后 · 算子优先',
+    pdfUrl: 'https://github.com/szylover/chinese-modular-forms/blob/main/linear-algebra-book/main.pdf',
+    repoUrl: 'https://github.com/szylover/chinese-modular-forms/tree/main/linear-algebra-book',
+    chapters: 12,
+  },
+  {
+    title: '抽象代数导论：面向模形式',
+    emoji: '📕',
+    description: 'Artin/DF风格 · 群环域Galois · 具体计算',
+    pdfUrl: 'https://github.com/szylover/chinese-modular-forms/blob/main/abstract-algebra-book/main.pdf',
+    repoUrl: 'https://github.com/szylover/chinese-modular-forms/tree/main/abstract-algebra-book',
+    chapters: 10,
+  },
+  {
     title: '模形式的代数基础',
     emoji: '📐',
     description: '从矩阵到 Galois 理论 · 750+ 习题',
