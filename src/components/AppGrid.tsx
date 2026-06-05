@@ -8,6 +8,7 @@ const apps: AppItem[] = [
   { name: '修仙游戏', emoji: '⚔️', url: 'https://xiuxian.lovebxy.net', description: '文字修仙冒险游戏', domain: 'xiuxian.lovebxy.net', badge: 'xiuxian-game' },
   { name: 'VM 监控', emoji: '📡', url: 'https://monitor.lovebxy.net', description: '虚拟机和 V2Ray 状态', domain: 'monitor.lovebxy.net', badge: 'vm-monitor' },
   { name: '麻雀訓練', emoji: '🀄', url: 'https://mahjong.lovebxy.net', description: '何切问题训练器', domain: 'mahjong.lovebxy.net', badge: 'mahjong-trainer' },
+  { name: '资源下载', emoji: '📦', url: 'https://szydownloads.z7.web.core.windows.net/', description: '教材PDF与工具下载', domain: 'szydownloads', badge: 'downloads' },
 ];
 
 export default function AppGrid() {
