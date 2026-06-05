@@ -5,6 +5,7 @@ import StatusPanel from './components/StatusPanel';
 import WeatherWidget from './components/WeatherWidget';
 import TodoList from './components/TodoList';
 import NotePad from './components/NotePad';
+import Resume from './components/Resume';
 import './App.css';
 
 export default function App() {
@@ -24,6 +25,10 @@ export default function App() {
         <section className="dashboard-row">
           <WeatherWidget />
           <TodoList />
+        </section>
+
+        <section className="dashboard-row full">
+          <Resume />
         </section>
 
         <section className="dashboard-row">
