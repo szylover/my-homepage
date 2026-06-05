@@ -60,6 +60,22 @@
 
 ## 个人项目
 
-- **[chinese-math-physics](https://github.com/szylover/chinese-math-physics)** — 高等数学与物理自编教材，LaTeX 排版
-- **[my_microkernel](https://github.com/szylover/my_microkernel)** — Rust 微内核操作系统实验项目
-- **[mahjong-trainer](https://github.com/szylover/mahjong-trainer)** — 麻将训练器，含 AI 对战
+### 🦀 [my_microkernel](https://github.com/szylover/my_microkernel) — Rust 微内核操作系统
+
+从零构建 x86 微内核，使用 Rust / C / ASM 实现完整的引导、内存管理（PMM / VMM / Heap / VMA）、交互式 Shell 等模块。配套撰写 18 章 + 2 附录的操作系统教程书籍（LaTeX 排版）。通过 QEMU + GDB 进行内核级调试。
+
+### 📚 [chinese-math-physics](https://github.com/szylover/chinese-math-physics) — 数学物理自编教材（共 1339 页）
+
+独立编写 6 本中文数学 / 物理教材，涵盖线性代数、抽象代数、模形式、力学与电磁学。全部使用 LaTeX / LuaLaTeX 排版，包含严格证明、习题集、300+ 道模形式练习题及 30+ 张 pgfplots 图表。
+
+### 🀄 [mahjong-heqie-ai](https://github.com/szylover/mahjong-heqie-ai) — 日麻 AI 推荐引擎
+
+Python 实现的立直麻将工具包，包含向听数计算、牌效率分析、役种评估与出牌推荐。架构分层清晰：底层 `mahjong/` 引擎、`inference/` 推理层、FastAPI 服务端。内含 300 题训练数据集与自动化测试。
+
+### ⚔️ [xiuxian-game](https://github.com/szylover/xiuxian-game) — 浏览器修仙 RPG
+
+React + TypeScript 开发的大型浏览器修仙游戏，包含战斗、炼丹、锻造、NPC 对话、任务系统、程序化地图生成、渡劫突破等十余个子系统。模块化架构：纯游戏逻辑与 UI 完全解耦，支持 DLC 注册与存档系统。
+
+### 📖 [legado-web](https://github.com/szylover/legado-web) — 阅读器 Web 版
+
+基于 React 18 + TypeScript + IndexedDB 构建的在线阅读器，支持书源导入/编辑、书架管理、阅读器、RSS 订阅、备份恢复。实现完整的书源规则引擎（CSS / XPath / JSONPath / 正则 / JS），支持离线持久化与移动端适配。
