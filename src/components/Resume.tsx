@@ -1,4 +1,4 @@
-const RESUME_URL = 'https://szydownloads.z7.web.core.windows.net/resume.pdf';
+const RESUME_URL = 'https://github.com/szylover/resume/raw/master/resume.pdf';
 
 export default function Resume() {
   return (
