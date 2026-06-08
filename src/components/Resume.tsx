@@ -11,9 +11,9 @@ export default function Resume() {
         <div className="resume-avatar">邵</div>
         <div className="resume-intro">
           <h2 className="resume-name">邵正悦 <span className="resume-name-en">Zhengyue Shao</span></h2>
-          <p className="resume-role">Software Engineer · Microsoft</p>
+          <p className="resume-role">Senior Android Platform Engineer · Microsoft</p>
           <p className="resume-summary">
-            资深 Android 工程师，8+ 年微软经验。目前在 M365 Copilot 移动端团队，负责 OCM Android SDK 核心模块。
+            8+ 年微软移动端平台工程经验，技术主线从 Mobile Client Infra 到 AI-enabled Mobile Platform 到 Copilot Runtime。现任 M365 Copilot Mobile Runtime 核心基础设施工程师。
           </p>
           <a className="resume-download" href={RESUME_URL} target="_blank" rel="noopener noreferrer">
             ⬇ 下载完整简历 (PDF)
