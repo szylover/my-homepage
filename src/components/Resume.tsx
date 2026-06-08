@@ -1,4 +1,5 @@
-const RESUME_URL = 'https://github.com/szylover/resume/raw/master/resume.pdf';
+const RESUME_CN_URL = 'https://szydownloads.z7.web.core.windows.net/resume.pdf';
+const RESUME_EN_URL = 'https://szydownloads.z7.web.core.windows.net/resume_en.pdf';
 
 export default function Resume() {
   return (
@@ -11,13 +12,18 @@ export default function Resume() {
         <div className="resume-avatar">邵</div>
         <div className="resume-intro">
           <h2 className="resume-name">邵正悦 <span className="resume-name-en">Zhengyue Shao</span></h2>
-          <p className="resume-role">Senior Android Platform Engineer · Microsoft</p>
+          <p className="resume-role">Software Engineer 2 · Microsoft</p>
           <p className="resume-summary">
-            8+ 年微软移动端平台工程经验，技术主线从 Mobile Client Infra 到 AI-enabled Mobile Platform 到 Copilot Runtime。现任 M365 Copilot Mobile Runtime 核心基础设施工程师。
+            8+ 年微软移动端平台工程经验，参与 Android 架构、SDK/Runtime、语音助手、会议智能与 AI 产品集成等方向。
           </p>
-          <a className="resume-download" href={RESUME_URL} target="_blank" rel="noopener noreferrer">
-            ⬇ 下载完整简历 (PDF)
-          </a>
+          <div className="resume-downloads">
+            <a className="resume-download" href={RESUME_CN_URL} target="_blank" rel="noopener noreferrer">
+              ⬇ 中文简历
+            </a>
+            <a className="resume-download resume-download-secondary" href={RESUME_EN_URL} target="_blank" rel="noopener noreferrer">
+              ⬇ English Resume
+            </a>
+          </div>
         </div>
       </div>
     </div>
