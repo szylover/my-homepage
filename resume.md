@@ -17,14 +17,14 @@
 OCM Android SDK，服务于 OfficeMobile、Outlook、Teams 等宿主应用。
 
 - OCM Android SDK 平台工程：版本发布、宿主集成支持、跨模块兼容性维护、ECS rollout 审批与 Feature Flag 管理
-- Copilot Runtime 基础设施迭代：配置体系、Feature Gate、GPT-5 模型切换、富响应渲染、Realtime Voice 链路
-- 核心功能模块交付：quote 上下文注入、WebSocket 合规路由、图片上传 Consent 流程
+- Copilot Runtime 基础架构演进：配置体系、Feature Gate、GPT-5 模型切换、富文本响应渲染、Realtime Voice 链路
+- 核心功能模块交付：quote 上下文注入、WebSocket 合规链路、图片上传 Consent 流程
 
 #### Outlook Android — Search & Compliance（2024 – 2025）
 
 Outlook Android 搜索体验与安全合规模块。
 
-- 搜索模块：People / Files / Events 多 tab 架构、结果渲染、性能遥测
+- 搜索模块：People / Files / Events 多 tab 架构、结果渲染、性能监控
 - Search 页面 UX：自定义搜索结果渲染框架、搜索交互与页面体验优化
 - 安全合规：Intune 企业策略校验、SafeLink 集成、资源访问控制修复
 
@@ -32,15 +32,15 @@ Outlook Android 搜索体验与安全合规模块。
 
 Teams Windows Desktop React Native 项目，为 Teams Desktop 提供 AI 增强的会议管理体验。
 
-- MeetApp 架构与功能：Graph / Substrate API 客户端、数据管道、会议列表、Recap 导航、AI 摘要
+- MeetApp 架构与功能：Graph / Substrate API 客户端、数据流、会议列表、Recap 导航、AI 摘要
 - Copilot 入口与跨会议 AI 摘要（CrossMeetingCatchUp），集成 BizChat streaming 对话流
-- 性能遥测体系（Kusto / Augloop）和调试工具，排查内存泄漏与导航延迟等生产问题
+- 性能监控体系（Kusto / Augloop）和调试工具，排查内存泄漏与导航延迟等生产问题
 
 #### 语音助手与对话式 AI — Cortana / PME（2019 – 2022）
 
 Play My Email、Catch Me Up、Play My Messages 三个语音产品的 Android 端。
 
-- Catch Me Up 在 Teams Android 从 POC 到 GA 的全链路集成：React Native 原生桥接、Cortana 语音交互（KWS / AEC / TTS）、消息 triage
+- Catch Me Up 在 Teams Android 从 POC 到 GA 的全链路集成：React Native 原生桥接、Cortana 语音交互（KWS / AEC / TTS）、消息分类
 - Outlook TTS 流式邮件播报与语音指令处理，session 稳定性优化
 - Hermes 引擎迁移与 SDX 架构重构，支持 Gov Cloud 部署
 
@@ -48,7 +48,7 @@ Play My Email、Catch Me Up、Play My Messages 三个语音产品的 Android 端
 
 SharePoint Online 大规模 Monorepo 构建系统现代化。
 
-- 传统构建系统到 Domino (BuildXL) 的迁移，优化增量构建管道
+- 传统构建系统到 Domino (BuildXL) 的迁移，优化增量构建流水线
 - 跨分支集成（Forward Integration）与 Build Break 响应（DRI）
 
 ---
@@ -79,4 +79,4 @@ SharePoint Online 大规模 Monorepo 构建系统现代化。
 | Android 平台 | Kotlin, Java, Jetpack Compose, Coroutines/Flow, Dagger/Hilt, OkHttp/WebSocket, Room, React Native |
 | 架构与 SDK | MVVM, Clean Architecture, SDK/Runtime 设计, 模块化, 依赖注入, Host/Plugin 架构, Feature Gate |
 | AI 与产品集成 | Copilot 集成, AI Context Pipeline, 语音交互 (TTS/AEC/KWS), 合规性 UX, 模型切换 |
-| 工程实践 | Monorepo CI/CD, 构建系统, 性能遥测/Kusto, 灰度发布, 生产事故响应, 跨团队协作 |
+| 工程实践 | Monorepo CI/CD, 构建系统, 性能监控/Kusto, 灰度发布, 线上问题处理, 跨团队协作 |
