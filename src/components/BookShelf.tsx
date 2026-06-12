@@ -25,6 +25,22 @@ const books: Book[] = [
     chapters: '10+',
   },
   {
+    title: 'AI Agent 工程师转行与面试完全指南',
+    emoji: '🤖',
+    description: '行业全景·LLM/RAG·Agent架构·MCP/A2A·LangChain·面试题340+',
+    pdfUrl: 'https://github.com/szylover/chinese-math-physics/tree/main/ai-agent-book',
+    repoUrl: 'https://github.com/szylover/chinese-math-physics/tree/main/ai-agent-book',
+    chapters: 20,
+  },
+  {
+    title: 'Android/TypeScript/Node.js 面试完全指南',
+    emoji: '📝',
+    description: 'Kotlin·Compose·React·Node.js·系统设计14案例·LeetCode50题',
+    pdfUrl: 'https://github.com/szylover/chinese-math-physics/tree/main/fullstack-interview-book',
+    repoUrl: 'https://github.com/szylover/chinese-math-physics/tree/main/fullstack-interview-book',
+    chapters: 18,
+  },
+  {
     title: '从牛顿到爱因斯坦：用微积分重新理解物理',
     emoji: '🔭',
     description: '力学·电磁学·相对论·Lagrangian·Noether定理 · 270页',
