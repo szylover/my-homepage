@@ -27,10 +27,10 @@ const books: Book[] = [
   {
     title: 'AI Agent 工程师转行与面试完全指南',
     emoji: '🤖',
-    description: '行业全景·LLM/RAG·Agent架构·MCP/A2A·LangChain·面试题340+',
-    pdfUrl: 'https://github.com/szylover/chinese-math-physics/tree/main/ai-agent-book',
-    repoUrl: 'https://github.com/szylover/chinese-math-physics/tree/main/ai-agent-book',
-    chapters: 20,
+    description: '零基础入门·行业全景·LLM/RAG·Agent架构·MCP/A2A·LangChain·Agentic工程实战·面试题340+',
+    pdfUrl: 'https://szydownloads.blob.core.windows.net/downloads/books/ai-agent-book.pdf',
+    repoUrl: 'https://github.com/szylover/chinese-math-physics/tree/ai-agent-book/ai-agent-book',
+    chapters: 22,
   },
   {
     title: 'Android/TypeScript/Node.js 面试完全指南',
