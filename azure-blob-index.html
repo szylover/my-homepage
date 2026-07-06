@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SZY Downloads</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
+  .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+  h1 { font-size: 2em; margin-bottom: 8px; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .subtitle { color: #888; margin-bottom: 40px; font-size: 0.95em; }
+  .section { margin-bottom: 36px; }
+  .section-title { font-size: 1.1em; color: #aaa; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #2a2a3a; }
+  .file-list { display: flex; flex-direction: column; gap: 10px; }
+  .file-card { display: flex; align-items: center; padding: 16px 20px; background: #1a1a2e; border-radius: 12px; text-decoration: none; color: #e0e0e0; transition: all 0.2s; border: 1px solid #2a2a3a; }
+  .file-card:hover { background: #252540; border-color: #667eea; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(102,126,234,0.15); }
+  .file-icon { font-size: 1.8em; margin-right: 16px; min-width: 40px; text-align: center; }
+  .file-info { flex: 1; }
+  .file-name { font-weight: 600; font-size: 1em; display: block; margin-bottom: 3px; }
+  .file-desc { font-size: 0.85em; color: #888; }
+  .file-size { font-size: 0.8em; color: #667eea; font-weight: 500; white-space: nowrap; margin-left: 12px; }
+  .dl-icon { color: #667eea; margin-left: 12px; font-size: 1.2em; }
+  .badge { display: inline-block; background: #667eea; color: #fff; font-size: 0.7em; padding: 2px 8px; border-radius: 6px; margin-left: 8px; vertical-align: middle; }
+  footer { text-align: center; color: #555; font-size: 0.8em; margin-top: 60px; padding-top: 20px; border-top: 1px solid #1a1a2e; }
+  footer a { color: #667eea; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📦 SZY Downloads</h1>
+  <p class="subtitle">个人资源下载站</p>
+
+  <div class="section">
+    <div class="section-title">📄 简历</div>
+    <div class="file-list">
+      <a class="file-card" href="https://szydownloads.z7.web.core.windows.net/resume.pdf">
+        <span class="file-icon">🇨🇳</span>
+        <div class="file-info"><span class="file-name">邵正悦 - 中文简历</span><span class="file-desc">Microsoft SDE2 · Android / SDK / AI 产品集成</span></div>
+        <span class="file-size">0.5 MB</span><span class="dl-icon">⬇</span>
+      </a>
+      <a class="file-card" href="https://szydownloads.z7.web.core.windows.net/resume_en.pdf">
+        <span class="file-icon">🇺🇸</span>
+        <div class="file-info"><span class="file-name">Zhengyue Shao - English Resume</span><span class="file-desc">Microsoft SDE2 · Android / SDK / AI Product Integration</span></div>
+        <span class="file-size">0.4 MB</span><span class="dl-icon">⬇</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📚 数学教材</div>
+    <div class="file-list">
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/linear-algebra-book.pdf">
+        <span class="file-icon">📘</span>
+        <div class="file-info"><span class="file-name">线性代数：从向量空间到算子</span><span class="file-desc">LADR 风格 · 241 页</span></div>
+        <span class="file-size">1.3 MB</span><span class="dl-icon">⬇</span>
+      </a>
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/abstract-algebra-book.pdf">
+        <span class="file-icon">📕</span>
+        <div class="file-info"><span class="file-name">抽象代数导论</span><span class="file-desc">群·环·域·Galois 理论 · 174 页</span></div>
+        <span class="file-size">1.1 MB</span><span class="dl-icon">⬇</span>
+      </a>
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/modular-forms-textbook.pdf">
+        <span class="file-icon">📗</span>
+        <div class="file-info"><span class="file-name">模形式与费马大定理</span><span class="file-desc">SL₂(ℤ) 到 Wiles 定理 · 315 页</span></div>
+        <span class="file-size">2.2 MB</span><span class="dl-icon">⬇</span>
+      </a>
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/modular-forms-exercises.pdf">
+        <span class="file-icon">📒</span>
+        <div class="file-info"><span class="file-name">模形式习题集</span><span class="file-desc">300+ 题 · 三级难度 · 完整解答 · 182 页</span></div>
+        <span class="file-size">1.1 MB</span><span class="dl-icon">⬇</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🔭 物理教材</div>
+    <div class="file-list">
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/physics-textbook.pdf">
+        <span class="file-icon">🔭</span>
+        <div class="file-info"><span class="file-name">从牛顿到爱因斯坦：用微积分重新理解物理</span><span class="file-desc">力学·电磁学·相对论·Noether 定理 · 270 页</span></div>
+        <span class="file-size">2.2 MB</span><span class="dl-icon">⬇</span>
+      </a>
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/physics-exercises.pdf">
+        <span class="file-icon">✏️</span>
+        <div class="file-info"><span class="file-name">微积分物理习题集</span><span class="file-desc">经典题·竞赛·大学物理·微分方程 · 157 页</span></div>
+        <span class="file-size">1.1 MB</span><span class="dl-icon">⬇</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🦀 操作系统</div>
+    <div class="file-list">
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/os-microkernel-book.pdf">
+        <span class="file-icon">🖥️</span>
+        <div class="file-info"><span class="file-name">自己动手写操作系统：从零构建 x86 微内核</span><span class="file-desc">Rust/C/ASM · Multiboot2 引导 · 内存管理 · 进程 · 文件系统 · 网络 · 33 章</span></div>
+        <span class="file-size">1.7 MB</span><span class="dl-icon">⬇</span>
+      </a>
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/os-ai-agent-book.pdf">
+        <span class="file-icon">🤖</span>
+        <div class="file-info"><span class="file-name">如何用 AI Agent 编写自己的操作系统</span><span class="file-desc">AI 辅助开发方法论 · Agent 协作工作流 · 12 章</span></div>
+        <span class="file-size">0.7 MB</span><span class="dl-icon">⬇</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🧠 AI 技术</div>
+    <div class="file-list">
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/claude-code-analysis.pdf">
+        <span class="file-icon">🔮</span>
+        <div class="file-info"><span class="file-name">深入剖析 Claude Code：Anthropic AI 编程助手架构与实现</span><span class="file-desc">源码逆向分析 · 查询引擎 · 工具系统 · MCP 协议 · 多智能体协调 · 17 章</span></div>
+        <span class="file-size">1.3 MB</span><span class="dl-icon">⬇</span>
+      </a>
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/ai-agent-book.pdf">
+        <span class="file-icon">🤖</span>
+        <div class="file-info"><span class="file-name">AI Agent 工程师转行与面试完全指南（2026）<span class="badge">NEW</span></span><span class="file-desc">行业全景 · LLM/RAG · Agent 架构 · MCP/A2A · LangChain · 面试题 340+ · 20 章</span></div>
+        <span class="file-size">1.7 MB</span><span class="dl-icon">⬇</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📝 面试指南</div>
+    <div class="file-list">
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/books/fullstack-interview-book.pdf">
+        <span class="file-icon">📝</span>
+        <div class="file-info"><span class="file-name">Android / TypeScript / Node.js 面试完全指南（2026）<span class="badge">NEW</span></span><span class="file-desc">Kotlin · Compose · React · Node.js · 系统设计 14 案例 · LeetCode 50 题 · 18 章</span></div>
+        <span class="file-size">1.5 MB</span><span class="dl-icon">⬇</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🛠️ 工具</div>
+    <div class="file-list">
+      <a class="file-card" href="https://szydownloads.blob.core.windows.net/downloads/tools/net-utils-7.22.5.zip">
+        <span class="file-icon">🌐</span>
+        <div class="file-info"><span class="file-name">Net Utils (Windows x64)</span><span class="file-desc">v7.22.5</span></div>
+        <span class="file-size">125 MB</span><span class="dl-icon">⬇</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://www.lovebxy.net">← 返回主页</a> · Hosted on Azure
+  </footer>
+</div>
+</body>
+</html>
